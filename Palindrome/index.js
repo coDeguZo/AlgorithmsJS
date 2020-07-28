@@ -34,10 +34,23 @@ function palindrome(string) {
 
 // checkPalindrome(string3)
 
-function palindrome(str){
-    let replaced = str.toLowerCase().replace(/[^a-z0-9]+/g, "")
-    let reversed = str.toLowerCase().replace(/[^a-z0-9]+/g, "").split("").reverse().join("")
-    console.log(reversed)
+// function palindrome(str){
+//     let replaced = str.toLowerCase().replace(/[^a-z0-9]+/g, "")
+//     let reversed = str.toLowerCase().replace(/[^a-z0-9]+/g, "").split("").reverse().join("")
+//     console.log(reversed)
+// }
+
+// palindrome(string1)
+
+function palindrome(string){
+    let replaced = string.toLowerCase().replace(/[^a-z0-9]+/g, "")
+    let reversed = replaced.toLowerCase().split("").reverse().join("")
+    if (replaced === reversed){
+        console.log(true)
+    } else {
+        console.log(false)
+    }
+
 }
 
-palindrome(string1)
+palindrome(string5)
