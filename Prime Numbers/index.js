@@ -8,3 +8,8 @@ function isPrime(num) {
     return true;
 }
 
+function isPrime(num) {
+    if (num % 2 === 0) {  return false;
+   } return true;}
+  //isPrime(40) gives us a False answer
+  //isPrime(101) gives us a True answer
