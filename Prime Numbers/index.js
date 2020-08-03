@@ -13,3 +13,13 @@ function isPrime(num) {
    } return true;}
   //isPrime(40) gives us a False answer
   //isPrime(101) gives us a True answer
+
+  function isPrime(num) {
+    if (num === 2) return true;
+    if (num <= 1) return false; if (num % 2 === 0) {
+     return false;
+      }
+    return true;
+   }//isPrime(0.5) gives us a False answer
+   //isPrime(2) gives us a True answer
+   //isPrime(577) gives us a True answer
