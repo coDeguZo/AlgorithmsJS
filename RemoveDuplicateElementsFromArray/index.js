@@ -37,8 +37,7 @@ const removeDuplicateElementsss = (array) => {
 
 function unique(arr) {
   // your code
-    let filtered = arr.filter((num, index) => {
-      debugger
+    let filtered = arr.filter((num, index, array) => {
       return arr.indexOf(num) === index
     })
     return filtered
