@@ -1,37 +1,31 @@
-// # Problem Statement 
-// ## Given an array of sorted numbers and a target sum, 
-// find a pair in the array whose sum is equal to the given target.
+// Leetcode Problem #26
 
-// ## Write a function 
-// to return the indices of the two numbers (i.e. the pair) such that they add up to the given target.
-// ## Example 1:
-// ## Input: [1, 2, 3, 4, 6], target=6
-// # Output: [1, 3]# Explanation: The numbers at index 1 and 3 add up 
-// to 6: 2+4=6
-// # Example 2:## Input: [2, 5, 9, 11], target=11# Output: [0, 2]# Explanation: The numbers at index 0 and 2 add up to 11: 2+9=11
+// Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
 
-let functionArray = [1, 2, 3, 4, 6]
-let functionTarget = 6
+let array = [0,0,1,1,1,2,2,3,3,4]
 
+// O(1); No created array can be used
+var removeDuplicates = function(nums) {
+  if(nums === null || nums.length === 0) return 0;
+    if(nums.length === 1) return 1;
+    let count = 0;
+      for(let i = 0; i< nums.length; i++) {
+          if(nums[i] != nums[i+1]){
+              count ++; 
+              nums[count] = nums[i+1];
+          }
+      }
+      return count;
+  };
 
-const sumArray = (array, target) => {
-  // Create an array to push indcies into.
-  const indexArray = []
-  // const indexLength = array.length
-  // Brute Force By using for loop to loop through the array.
-  // Add two numbers at the indcies together and if equal to 6 push the indeices into the indexArray.
+console.log(removeDuplicates(array))
 
-  for(let i = 0; i < array.length; i++){
-    if (array[i] + array[i + 1] === target){
-      return indexArray.push(i, j)
-    }
-  }
-}
+// O(n)
+var removeDuplicates = function(nums) {
+  if(nums === null || nums.length === 0) return 0;
+  let newNums = new Set(nums)
+  let newArray = [...newNums]
+  return newArray.length
+};
 
-console.log(sumArray(functionArray, functionTarget))
-
-// for(let j = i + 1; j < array.length; j++){
-//   if (array[i] + array[j] === target){
-//     return indexArray.push(i, j)
-//   }
-// }
+console.log(removeDuplicates(array))
