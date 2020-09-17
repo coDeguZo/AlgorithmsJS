@@ -1,5 +1,6 @@
-let prefixArray = ["flowers", "flow", "flew"]
+let prefixArray = ["flowers", "fow", "flew"]
 let noPrefix = [""]
+let empty = []
 
 function Prefix(strs){
   let prefix= ""
@@ -7,6 +8,7 @@ function Prefix(strs){
   for(let i = 0; i < strs[0].length; i++){
       const char = strs[0][i]
       for(let j = 1; j < strs.length; j++){
+        debugger
           if(strs[j][i] !== char) return prefix
       }
       prefix = prefix + char
