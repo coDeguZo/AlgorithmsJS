@@ -12,8 +12,6 @@ def merge_ranges(meetings)
       if current_meeting_start <= last_merged_meeting_end
         merged_meetings[-1] = [last_merged_meeting_start, [last_merged_meeting_end, current_meeting_end].max ]
       end
-      binding.pry
-
     end
 end
 
@@ -26,3 +24,18 @@ merge_ranges(meetings)
 #     [last_merged_meeting_end, current_meeting_end].max
 #     ]
 # else
+
+nums = [2,7,11,15]
+target = 9
+def two_sum(nums, target)
+  new_array = []
+  nums.each_cons(2) do |a, b|
+      if a + b == target
+        new_array.push(a, b)
+      end
+  end
+  new_array
+  binding.pry
+end
+
+two_sum(nums, target)

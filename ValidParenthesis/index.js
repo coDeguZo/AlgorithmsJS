@@ -12,13 +12,11 @@ function ValidParenthesis(s) {
       else {
           let last = stack.pop();
           if (s[i] !== main[last]) {
-            debugger
             return false};
       }
   }
       if (stack.length !== 0) {
         return false};
-      
 
   return true;
 };
