@@ -43,4 +43,19 @@ function unique(arr) {
     return filtered
 }
 
-console.log(unique(array))
+// console.log(unique(array))
+
+
+// let array44 = [0,0,1]
+
+// var moveZeroes = function(nums) {
+//   let zeroplace
+//   for (let i = 0; i < nums.length; i++){
+//       if (nums[i] === 0){
+//           zeroplace = Number(nums.splice(i, 1))
+//           nums.push(zeroplace)
+//       }
+//   }
+//   return nums
+// };
+
