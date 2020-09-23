@@ -23,6 +23,7 @@ var lengthOfLongestSubstring = function(str) {
 
   for (let i = 0; i < str.length; i++){
     current = current.substring(current.indexOf(str[i]) + 1)
+    debugger
     current += str[i]
     if (current.length > longest){
       longest = current.length
