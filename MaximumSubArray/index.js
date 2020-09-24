@@ -7,18 +7,34 @@
 // approach, which is more subtle.
 
 
-let nums = [-1]
+let nums = [-2,1,-3,4,-1,2,1,-5,4]
 
-function maxSubArray(arr) {
-  let max = 0;
-  let sum = 0;
+// var maxSubArray = function(nums) {
+//   let currentMax = nums[0];
+//   let max = nums[0];
 
-  for (let num of arr) {
-    sum += max
-    max = Math.max(max, sum); 
-    if (sum < 0) sum = 0
+//   for (let i = 1; i < nums.length; i += 1) {
+//     debugger
+//     currentMax = Math.max(currentMax + nums[i], nums[i]);
+//     max = Math.max(currentMax, max);
+//   }
+//   return max;
+// };
+
+const maxSubArray = nums => {
+  // let max = nums[0]
+  // let sum = nums[0]
+  // for (let i = 1; i < nums.length; i++){
+  //   sum = Math.max(sum + nums[i], nums[i])
+  //   max = Math.max(max, sum)
+  // }
+  // return max
+  for (let i = 0; i < nums.length; i++){
+    for (let j = 0; j < nums.length; j++){
+      debugger
+    }
   }
-  return max;
 }
 
 console.log(maxSubArray(nums))
+
